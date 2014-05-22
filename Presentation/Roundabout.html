@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Roundabout JS Presentation</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/styles/sunburst.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+                <!--<section> go here-->
+        		<section>
+                    <h1>Welcome!</h1>
+                    <h3>Thank You For Viewing My Presentation On Roundabout JS!</h3>
+                    <h5>by: Taylor Cawiezell</h5>
+                </section>
+                
+                <section>
+                    <p>What is Roundabout JS?</p>
+                </section>
+                
+                <section>
+                    <p>Simply, it's a jquery plugin that creates a interactive, three dementional slide show.</p>
+                </section>
+                
+                <section>
+                    <p>Why did I choose this plungin?</p>
+                     <ol>
+                        <li class='fragment'>It's easy to use</li>
+                        <li class='fragment'>It has a lot of practical application.</li>
+                        <li class='fragment'>It just looks awesome!</li>
+                     </ol>
+                </section>
+                
+                 <section>
+                    <h3>Let's Look at the requirement for Roundabout js.</h3>
+                     <ul>
+                        <li class='fragment'>Jquery 1.2 or later
+                            <pre><code><script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script></code></pre></li>
+                        <li class='fragment'>You can download a physical file of Jquery <a href='http://jquery.com/download/'>Here</a>.</li>
+                        <li class='fragment'>Roundabout.js file, which you can find <a href='https://github.com/fredleblanc/roundabout'>Here</a>.</li>
+                        <li class='fragment'>CSS if customization is required</li>
+                     </ul>
+                </section>
+                
+                <section>
+                    For the demo I will be using Event Drag and Event Drop add-ons as well, this can be found on the Roundabout js github page.
+                </section>
+              
+                <section>
+                    
+                    <section><p>Lets take a closer look at Roundabout js.</p></section>
+                    <section><h1>API</h1></section>
+                    
+                    <section>Roundabouts API is very simple.</section>
+                    <section>Once we have linked the proper files all we need to do is create a &lt;ul&gt; tag, like this!
+                        
+                        <code><pre>&lt;ul&nbsp;class='pictures'&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img&nbsp;src='pic1.png'&nbsp;/&gt;&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img&nbsp;src='pic2.png'&nbsp;/&gt;&lt;/li&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img&nbsp;src='pic3.png'&nbsp;/&gt;&lt;/li&gt;&nbsp;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img&nbsp;src='pic1.png'&nbsp;/&gt;&lt;/li&gt;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img&nbsp;src='pic2.png'&nbsp;/&gt;&lt;/li&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img&nbsp;src='pic3.png'&nbsp;/&gt;&lt;/li&gt;&nbsp;
+                            <br>&lt;/ul&gt;</pre></code>
+                        </section>
+                    <section>
+                        <h4>Next we use CSS to make it look the way we want.</h4>
+                        <code><pre>.pictures{
+    list-style: none;
+    top: 100px;
+    margin: auto;
+}
+
+.roundabout-holder{
+      height: 300px;
+      width: 600px;
+      left:50px;
+   }
+   
+.roundabout-moveable-item {
+      height:200px;
+      width: 200px;
+      cursor: pointer;
+   }</pre></code><h4>I took away the styling on the ul tag and made sizing calls to roundabout.</h4></section>
+                    <section><h4>After that we create our slide using this jquery API.</h4>
+                        
+                        <code><pre>
+                            $(document).ready(function() {
+
+                                $('.pictures').roundabout({
+                                     enableDrag: true,
+                                     autoplay: true,
+                                     autoplayDuration: 2000,
+                                     autoplayPauseOnHover: true
+                                  });
+                                });
+                            </pre></code>
+                        <h4>Once we reference the correct ul tag, its done!</h4>
+                        <p class='fragment'>If you want you can also add enable drag and autoplay on this slide like so!</p>
+                    </section>
+                    <section>
+                        <a href='demo.html'>Here are the results</a>
+                        <p class='fragment'>We can really create this slide however we want and change the way it slides, or make this slide do a figure 8. Play with it!</p>
+                       
+                     </section>
+                    
+                    <section>I hope you enjoyed this look at roundabout js, and I encourage you to have fun with this demo, customize it to your own taste.</section>
+                </section>
+                
+                
+    		
+                	
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme || 'sky', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
